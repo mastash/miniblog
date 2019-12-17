@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add post Form</title>
+</head>
+<body>
+
+<!--<h1> Add post form</h1>-->
+<!--<form th:object="${newPostForm}" method="post" th:action="@{/post/add}">-->
+    <!--Tytuł:<br>-->
+    <!--<input type="text" th:field="*{title}">-->
+    <!--<span th:errors="*{title}"></span>-->
+    <!--<br>-->
+    <!--Treść:<br>-->
+    <!--<textarea th:field="*{comment}"></textarea>-->
+    <!--<span th:errors="*{comment}"></span>-->
+
+    <!--<br>-->
+    <!--<input type="submit" value="Dodaj">-->
+<!--</form>-->
+
+
+
+<form  th:object="${newPostForm}" method="post" th:action="@{/post/add}">
+    Tytuł:
+    <input type="text" th:field="*{title}"/>
+    <span th:errors="*{title}"></span>
+
+    <br>Komentarz:
+    <textarea  th:field="*{comment}"/></textarea>
+    <span th:errors="*{comment}"></span>
+
+
+    <br><input type="submit" value="Dodaj">
+
+</form>
+
+
+</body>
+</html>

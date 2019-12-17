@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOW ALL POSTS:</title>
+</head>
+<body>
+
+<h1>show ALL posts</h1>
+
+<div th:each="post : ${posts}">
+    <h3 th:text="${post.title}">Tytuł posta</h3>
+    <span th:text="${#temporals.format(post.added, 'yyy-MM-dd HH:mm')}">data czas </span>
+
+</div>
+
+
+
+</body>
+</html>

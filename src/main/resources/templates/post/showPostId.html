@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>show post id</h1>
+<h2 th:text="${'Post ID:  ' + post}">  </h2>
+
+<form method="get" th:action="@{/post}">
+    Post Id: <input type="text" name="postId"/> <br/>
+    <input type="submit" value="Search Selected Post" />
+</form>
+
+<h3 th:text="${post.title}">Tytuł posta</h3>
+<span th:text="${post.added}">data czas </span>
+<p th:text="${post.commnent}"> Tresc posta</p>
+
+
+
+
+
+</body>
+</html>
